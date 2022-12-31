@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailPetActivity">
+
+
+    <TextView
+        android:id="@+id/txtNamaDetail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Nama Pemilik"
+        android:padding="15dp"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:background="@drawable/buttonshape"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/txtDetailHewan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        android:text="Nama hewan"
+        android:padding="15dp"
+        android:background="@drawable/buttonshape"
+        android:backgroundTint="@color/cyanblue"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtNamaDetail"
+        tools:ignore="DuplicateIds" />
+
+    <TextView
+        android:id="@+id/txtDetailJenis"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="5dp"
+        android:text="Jenis hewan"
+        android:padding="15dp"
+        android:background="@drawable/buttonshape"
+        android:backgroundTint="@color/cyanblue"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtDetailHewan"
+        tools:ignore="DuplicateIds" />
+
+    <TextView
+        android:id="@+id/txtDetailRas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="5dp"
+        android:text="Ras hewan"
+        android:padding="15dp"
+        android:background="@drawable/buttonshape"
+        android:backgroundTint="@color/cyanblue"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtDetailJenis"
+        tools:ignore="DuplicateIds" />
+
+    <Button
+        android:id="@+id/btnDetailClose"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:onClick="close"
+        android:text="Tutup"
+        android:textColor="#003486"
+        android:textStyle="bold"
+        android:background="@drawable/buttonshape"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtDetailRas" />
+
+    <Button
+        android:id="@+id/btnDetailDel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:onClick="deletePet"
+        android:text="Hapus"
+        android:textColor="#740C00"
+        android:textStyle="bold"
+        android:background="@drawable/buttonshape"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnDetailClose"
+        app:layout_constraintTop_toBottomOf="@+id/txtDetailRas" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
